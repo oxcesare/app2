@@ -6,4 +6,6 @@ import javax.persistence.Entity;
 @Entity
 public class Nivel {
 
+	private Long id;
+	
 }

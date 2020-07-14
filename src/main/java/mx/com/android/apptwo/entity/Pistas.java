@@ -5,5 +5,5 @@ import javax.persistence.Entity;
 
 @Entity
 public class Pistas {
-
+	private Long id;
 }
