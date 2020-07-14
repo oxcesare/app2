@@ -4,5 +4,8 @@ import javax.persistence.Entity;
 
 @Entity
 public class Evaluacion {
+	
+	private Long id;
+
 
 }
