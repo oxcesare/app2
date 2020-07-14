@@ -12,4 +12,25 @@ public class Estatus {
 	private Long id;
 	private String stStatus;
 	
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public String getStStatus() {
+		return stStatus;
+	}
+	public void setStStatus(String stStatus) {
+		this.stStatus = stStatus;
+	}
+	@Override
+	public String toString() {
+		return "Estatus [id=" + id + ", stStatus=" + stStatus + "]";
+	}
+	
+	
+	
+	
+	
 }
