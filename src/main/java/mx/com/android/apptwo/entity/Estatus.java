@@ -27,7 +27,6 @@ public class Estatus {
 	@Override
 	public String toString() {
 		return "Estatus [id=" + id + ", stStatus=" + stStatus + "]";
-	}
-		
+	}	
 	
 }
