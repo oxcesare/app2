@@ -28,9 +28,6 @@ public class Estatus {
 	public String toString() {
 		return "Estatus [id=" + id + ", stStatus=" + stStatus + "]";
 	}
-	
-	
-	
-	
+		
 	
 }
