@@ -1,39 +1,39 @@
 package mx.com.android.apptwo.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
-
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Respondidas {
 
 	@Id
 	@GeneratedValue
-	private Long id;
-	
+	private Integer idRespondidas;
+
+	@Column(name = "ST_ESTADO_REGISTRO")
 	private String stEstadoRegistro;
-	
-	@OneToMany
-	private Usuarios idUsuario;
-	
-	@OneToMany
-	private Temas idTema;
-	
-	
-	@OneToMany
+
+	@ManyToOne
 	private Preguntas idPregunta;
-	
-	@OneToMany
+
+	@ManyToOne
 	private Estatus idStatus;
 
-	public Long getId() {
-		return id;
+	@ManyToOne
+	private Temas idTema;
+
+	@ManyToOne
+	private Usuarios idUsuario;
+
+	public Integer getIdRespondidas() {
+		return idRespondidas;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setIdRespondidas(Integer idRespondidas) {
+		this.idRespondidas = idRespondidas;
 	}
 
 	public String getStEstadoRegistro() {
@@ -42,22 +42,6 @@ public class Respondidas {
 
 	public void setStEstadoRegistro(String stEstadoRegistro) {
 		this.stEstadoRegistro = stEstadoRegistro;
-	}
-
-	public Usuarios getIdUsuario() {
-		return idUsuario;
-	}
-
-	public void setIdUsuario(Usuarios idUsuario) {
-		this.idUsuario = idUsuario;
-	}
-
-	public Temas getIdTema() {
-		return idTema;
-	}
-
-	public void setIdTema(Temas idTema) {
-		this.idTema = idTema;
 	}
 
 	public Preguntas getIdPregunta() {
@@ -76,15 +60,25 @@ public class Respondidas {
 		this.idStatus = idStatus;
 	}
 
-	@Override
-	public String toString() {
-		return "Respondidas [id=" + id + ", stEstadoRegistro=" + stEstadoRegistro + ", idUsuario=" + idUsuario
-				+ ", idTema=" + idTema + ", idPregunta=" + idPregunta + ", idStatus=" + idStatus + "]";
+	public Temas getIdTema() {
+		return idTema;
 	}
+
+	public void setIdTema(Temas idTema) {
+		this.idTema = idTema;
+	}
+
+	public Usuarios getIdUsuario() {
+		return idUsuario;
+	}
+
+	public void setIdUsuario(Usuarios idUsuario) {
+		this.idUsuario = idUsuario;
+	}
+
 	
 	
-	
-	
+
 	
 	
 }

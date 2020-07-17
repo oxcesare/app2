@@ -1,6 +1,6 @@
 package mx.com.android.apptwo.entity;
 
-
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -8,24 +8,23 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Pistas {
-	
-	
-	
+
 	@Id
 	@GeneratedValue
-	private Long id;
-	
+	private Integer idPista;
+
+	@Column(name = "ST_PISTA")
 	private String stPista;
-	
+
 	@ManyToOne
 	private Preguntas idPregunta;
 
-	public Long getId() {
-		return id;
+	public Integer getIdPista() {
+		return idPista;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setIdPista(Integer idPista) {
+		this.idPista = idPista;
 	}
 
 	public String getStPista() {
@@ -44,14 +43,6 @@ public class Pistas {
 		this.idPregunta = idPregunta;
 	}
 
-	@Override
-	public String toString() {
-		return "Pistas [id=" + id + ", stPista=" + stPista + ", idPregunta=" + idPregunta + "]";
-	}
 	
-	
-	
-	
-	  
-	
+
 }

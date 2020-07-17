@@ -1,29 +1,33 @@
 package mx.com.android.apptwo.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Temas {
 
 	@Id
 	@GeneratedValue
-	private Long id;
+	private Integer idTema;
+
+	@Column(name = "ST_NOMBRE")
 	private String stNombre;
+
+	@Column(name = "ST_DESCRIPCION")
 	private String stDescripcion;
 
-	@OneToOne
+	@ManyToOne
 	private Nivel idNivel;
 
-	public Long getId() {
-		return id;
+	public Integer getIdTema() {
+		return idTema;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setIdTema(Integer idTema) {
+		this.idTema = idTema;
 	}
 
 	public String getStNombre() {
@@ -50,10 +54,8 @@ public class Temas {
 		this.idNivel = idNivel;
 	}
 
-	@Override
-	public String toString() {
-		return "Temas [id=" + id + ", stNombre=" + stNombre + ", stDescripcion=" + stDescripcion + ", idNivel="
-				+ idNivel + "]";
-	}
+	
+	
+	
 
 }

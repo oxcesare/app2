@@ -1,5 +1,12 @@
 package mx.com.android.apptwo.Dao;
 
-public interface PreguntasDAO {
+import org.springframework.data.repository.CrudRepository;
+
+import mx.com.android.apptwo.entity.Preguntas;
+
+public interface PreguntasDAO  extends CrudRepository<Preguntas, Integer>{
+	
+	
+	
 
 }

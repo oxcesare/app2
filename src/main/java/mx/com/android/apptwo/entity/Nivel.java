@@ -1,6 +1,7 @@
 package mx.com.android.apptwo.entity;
 
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -10,16 +11,17 @@ public class Nivel {
 
 	@Id
 	@GeneratedValue
-	private Long id;
+	private Integer idNivel;
 	
+	@Column(name="ST_DESCRIPCION")
 	private String stDescripcion;
 
-	public Long getId() {
-		return id;
+	public Integer getIdNivel() {
+		return idNivel;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setIdNivel(Integer idNivel) {
+		this.idNivel = idNivel;
 	}
 
 	public String getStDescripcion() {
@@ -30,14 +32,6 @@ public class Nivel {
 		this.stDescripcion = stDescripcion;
 	}
 
-	@Override
-	public String toString() {
-		return "Nivel [id=" + id + ", stDescripcion=" + stDescripcion + "]";
-	}
-	
-	
-	
-	
-	
+		
 	
 }

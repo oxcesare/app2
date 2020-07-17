@@ -10,32 +10,36 @@ public class Evaluacion {
 	
 	@Id
 	@GeneratedValue
-	private Long id;
+	private Integer idEvaluacion;
+	
 	
 	@ManyToOne
 	private Usuarios idUsuario;
 
-	public Long getId() {
-		return id;
+
+	public Integer getIdEvaluacion() {
+		return idEvaluacion;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+
+	public void setIdEvaluacion(Integer idEvaluacion) {
+		this.idEvaluacion = idEvaluacion;
 	}
+
 
 	public Usuarios getIdUsuario() {
 		return idUsuario;
 	}
 
+
 	public void setIdUsuario(Usuarios idUsuario) {
 		this.idUsuario = idUsuario;
 	}
 
-	@Override
-	public String toString() {
-		return "Evaluacion [id=" + id + ", idUsuario=" + idUsuario + "]";
-	}
+
 	
+
+
 	
 	
 	

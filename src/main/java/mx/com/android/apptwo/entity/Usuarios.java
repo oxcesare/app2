@@ -1,39 +1,45 @@
 package mx.com.android.apptwo.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Usuarios {
-	
+
 	@Id
 	@GeneratedValue
-	private Long id;
-	
-	private String stNombre;
-	
-	private String stApellidoPaterno;
-	
-	private String stApellidoMaterno;
-	
-	private String stUsuario;
-	
-	private String stPassword;
-	
-	
-	private String stCorreo;
-	
-	@OneToOne
-	private Nivel  idNivel;
+	private Integer idUsuario;
 
-	public Long getId() {
-		return id;
+	@Column(name = "ST_NOMBRE")
+	private String stNombre;
+
+	@Column(name = "ST_APELLIDO_PATERNO")
+	private String stApellidoPaterno;
+
+	@Column(name = "ST_APELLIDO_MATERNO")
+	private String stApellidoMaterno;
+
+	@Column(name = "ST_USUARIO")
+	private String stUsuario;
+
+	@Column(name = "ST_PASSWORD")
+	private String stPassword;
+
+	@Column(name = "ST_CORREO")
+	private String stCorreo;
+
+	@ManyToOne
+	private Nivel idNivel;
+
+	public Integer getIdUsuario() {
+		return idUsuario;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setIdUsuario(Integer idUsuario) {
+		this.idUsuario = idUsuario;
 	}
 
 	public String getStNombre() {
@@ -88,18 +94,8 @@ public class Usuarios {
 		return idNivel;
 	}
 
-	@Override
-	public String toString() {
-		return "Usuarios [id=" + id + ", stNombre=" + stNombre + ", stApellidoPaterno=" + stApellidoPaterno
-				+ ", stApellidoMaterno=" + stApellidoMaterno + ", stUsuario=" + stUsuario + ", stPassword=" + stPassword
-				+ ", stCorreo=" + stCorreo + ", idNivel=" + idNivel + "]";
-	}
-
 	public void setIdNivel(Nivel idNivel) {
 		this.idNivel = idNivel;
 	}
-	
-	
-	
 
 }
