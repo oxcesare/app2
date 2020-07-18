@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import mx.com.android.apptwo.entity.Preguntas;
-import mx.com.android.apptwo.service.PreguntaService;
+import mx.com.android.apptwo.service.impl.PreguntaService;
 
 @RestController
 @RequestMapping("/preguntas")
