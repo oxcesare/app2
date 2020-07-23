@@ -4,7 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Preguntas {
@@ -19,10 +19,7 @@ public class Preguntas {
 	@Column(name = "ST_PREGUNTA")
 	private String stPregunta;
 
-	@OneToOne
-	private Nivel idNivel;
-
-	@OneToOne
+	@ManyToOne
 	private Temas idTema;
 
 	public Integer getIdPregunta() {
@@ -49,14 +46,6 @@ public class Preguntas {
 		this.stPregunta = stPregunta;
 	}
 
-	public Nivel getIdNivel() {
-		return idNivel;
-	}
-
-	public void setIdNivel(Nivel idNivel) {
-		this.idNivel = idNivel;
-	}
-
 	public Temas getIdTema() {
 		return idTema;
 	}
@@ -64,10 +53,5 @@ public class Preguntas {
 	public void setIdTema(Temas idTema) {
 		this.idTema = idTema;
 	}
-
-	
-	
-	
-
 
 }

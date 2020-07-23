@@ -26,7 +26,6 @@ public class PreguntasController {
 		return ResponseEntity.ok(lista);
 	}
 	
-	
 	@GetMapping("/listaPreguntas/{id}")
 	public ResponseEntity<Optional<Preguntas>> listPreguntas(@PathVariable("id") Integer id) {
 		Optional<Preguntas> lista = preguntaService.listarId(id);

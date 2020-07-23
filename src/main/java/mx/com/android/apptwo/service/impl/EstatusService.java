@@ -4,11 +4,13 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import mx.com.android.apptwo.Dao.EstatusDAO;
 import mx.com.android.apptwo.entity.Estatus;
 import mx.com.android.apptwo.service.IEstatusService;
 
+@Service
 public class EstatusService implements IEstatusService {
 
 	@Autowired

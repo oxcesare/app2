@@ -4,11 +4,14 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import mx.com.android.apptwo.Dao.TemasDAO;
 import mx.com.android.apptwo.entity.Temas;
 import mx.com.android.apptwo.service.ITemasService;
 
+
+@Service
 public class TemasService implements ITemasService {
 	
 	@Autowired

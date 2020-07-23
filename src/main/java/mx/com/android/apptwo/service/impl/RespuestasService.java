@@ -4,11 +4,13 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import mx.com.android.apptwo.Dao.RespuestasDAO;
 import mx.com.android.apptwo.entity.Respuestas;
 import mx.com.android.apptwo.service.IRespuestasService;
 
+@Service
 public class RespuestasService implements IRespuestasService {
 	
 	@Autowired

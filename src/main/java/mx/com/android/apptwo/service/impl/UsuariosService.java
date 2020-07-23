@@ -4,11 +4,14 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import mx.com.android.apptwo.Dao.UsuariosDAO;
 import mx.com.android.apptwo.entity.Usuarios;
 import mx.com.android.apptwo.service.IUsuariosService;
 
+
+@Service
 public class UsuariosService implements IUsuariosService {
 	
 	@Autowired

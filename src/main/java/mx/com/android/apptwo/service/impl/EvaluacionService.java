@@ -5,10 +5,12 @@ import java.util.Optional;
 
 import mx.com.android.apptwo.Dao.EvaluacionDAO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import mx.com.android.apptwo.entity.Evaluacion;
 import mx.com.android.apptwo.service.IEvaluacionService;
 
+@Service
 public class EvaluacionService implements IEvaluacionService {
 	
 	@Autowired

@@ -4,11 +4,14 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import mx.com.android.apptwo.Dao.RespondidasDAO;
 import mx.com.android.apptwo.entity.Respondidas;
 import mx.com.android.apptwo.service.IRespondidasService;
 
+
+@Service
 public class RespondidasService implements IRespondidasService {
 	
 	
