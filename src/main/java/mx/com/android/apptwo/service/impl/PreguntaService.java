@@ -30,7 +30,13 @@ public class PreguntaService implements IPreguntaService {
 
 	@Override
 	public int save(Preguntas p) {
-		// TODO Auto-generated method stub
+		int res=0;		
+		Preguntas pregunta = preguntaService.save(p);
+		
+		if(!pregunta.equals(null)) {
+			res=1;
+		}
+		
 		return 0;
 	}
 

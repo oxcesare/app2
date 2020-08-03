@@ -1,8 +1,10 @@
 package mx.com.android.apptwo.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
@@ -11,7 +13,7 @@ import javax.persistence.OneToOne;
 public class Temas {
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idTema;
 
 	@Column(name = "ST_NOMBRE")
@@ -20,7 +22,7 @@ public class Temas {
 	@Column(name = "ST_DESCRIPCION")
 	private String stDescripcion;
 
-	@ManyToOne
+	@ManyToOne(cascade = {CascadeType.MERGE})
 	private Nivel idNivel;
 
 	public Integer getIdTema() {

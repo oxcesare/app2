@@ -1,8 +1,10 @@
 package mx.com.android.apptwo.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
@@ -10,16 +12,13 @@ import javax.persistence.ManyToOne;
 public class Preguntas {
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idPregunta;
 
-	@Column(name = "ST_NOMBRE")
-	private String stNombre;
-
 	@Column(name = "ST_PREGUNTA")
-	private String stPregunta;
+	private String pregunta;
 
-	@ManyToOne
+	@ManyToOne(cascade = {CascadeType.MERGE})
 	private Temas idTema;
 
 	public Integer getIdPregunta() {
@@ -30,28 +29,20 @@ public class Preguntas {
 		this.idPregunta = idPregunta;
 	}
 
-	public String getStNombre() {
-		return stNombre;
-	}
-
-	public void setStNombre(String stNombre) {
-		this.stNombre = stNombre;
-	}
-
-	public String getStPregunta() {
-		return stPregunta;
-	}
-
-	public void setStPregunta(String stPregunta) {
-		this.stPregunta = stPregunta;
-	}
-
 	public Temas getIdTema() {
 		return idTema;
 	}
 
 	public void setIdTema(Temas idTema) {
 		this.idTema = idTema;
+	}
+
+	public String getPregunta() {
+		return pregunta;
+	}
+
+	public void setPregunta(String pregunta) {
+		this.pregunta = pregunta;
 	}
 
 }
