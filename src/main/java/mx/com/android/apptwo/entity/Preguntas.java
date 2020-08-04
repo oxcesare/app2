@@ -15,7 +15,7 @@ public class Preguntas {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idPregunta;
 
-	@Column(name = "ST_PREGUNTA")
+	@Column(name = "ST_PREGUNTA", columnDefinition = "TEXT")
 	private String pregunta;
 
 	@ManyToOne(cascade = {CascadeType.MERGE})
