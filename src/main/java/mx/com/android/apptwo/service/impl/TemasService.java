@@ -30,7 +30,13 @@ public class TemasService implements ITemasService {
 
 	@Override
 	public int save(Temas p) {
-		// TODO Auto-generated method stub
+		Temas tema = temasDAO.save(p);
+		int res=0;
+		
+		if(!tema.equals(null)) {
+			res=1;
+		}
+		
 		return 0;
 	}
 

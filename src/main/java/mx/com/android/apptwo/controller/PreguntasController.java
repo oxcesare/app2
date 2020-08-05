@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import mx.com.android.apptwo.entity.Preguntas;
+import mx.com.android.apptwo.response.PreguntaServiceResponse;
 import mx.com.android.apptwo.response.ResponsePreguntas;
-import mx.com.android.apptwo.service.PreguntaServiceResponse;
 import mx.com.android.apptwo.service.impl.PreguntaService;
 
 @Controller
@@ -39,7 +39,6 @@ public class PreguntasController {
 	public ResponseEntity<List<ResponsePreguntas>> listPreguntas() {
 
 		List<ResponsePreguntas> response = serviceResponse.responsePreguntas();
-
 		return ResponseEntity.ok(response);
 	}
 

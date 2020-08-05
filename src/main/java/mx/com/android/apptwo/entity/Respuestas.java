@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import org.hibernate.annotations.Type;
+
 @Entity
 public class Respuestas {
 
@@ -17,8 +19,20 @@ public class Respuestas {
 	@Column(name = "ST_RESPUESTA")
 	private String stRespuesta;
 
+	
+	private Integer idCorrect;
+
 	@ManyToOne
 	private Preguntas idPregunta;
+
+	
+   public Integer getIdCorrect() {
+		return idCorrect;
+	}
+
+	public void setIdCorrect(Integer idCorrect) {
+		this.idCorrect = idCorrect;
+	}
 
 	public Integer getIdRespuesta() {
 		return idRespuesta;
@@ -43,8 +57,5 @@ public class Respuestas {
 	public void setIdPregunta(Preguntas idPregunta) {
 		this.idPregunta = idPregunta;
 	}
-	
-	
 
-	
 }

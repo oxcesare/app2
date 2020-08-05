@@ -29,14 +29,17 @@ public class PistasService implements IPistasService {
 
 	@Override
 	public int save(Pistas p) {
-		// TODO Auto-generated method stub
+		Pistas pistas = pistasDAO.save(p);
+		
+		if(!pistas.equals(null)) {
+			
+		}
 		return 0;
 	}
 
 	@Override
 	public void delete(Pistas p) {
-		// TODO Auto-generated method stub
-
+		pistasDAO.delete(p);
 	}
 
 }

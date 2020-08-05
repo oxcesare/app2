@@ -15,7 +15,8 @@ public class RespuestasService implements IRespuestasService {
 	
 	@Autowired
 	private RespuestasDAO respuestasDAO;
-
+	
+	
 	@Override
 	public List<Respuestas> listaRespuestas() {		
 		return (List<Respuestas>) respuestasDAO.findAll();

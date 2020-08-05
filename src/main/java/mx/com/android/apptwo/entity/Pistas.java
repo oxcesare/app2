@@ -14,7 +14,7 @@ public class Pistas {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idPista;
 
-	@Column(name = "ST_PISTA")
+	@Column(name = "ST_PISTA",columnDefinition = "TEXT")
 	private String stPista;
 
 	@ManyToOne
