@@ -24,9 +24,6 @@ public class Respondidas {
 	private Estatus idStatus;
 
 	@ManyToOne
-	private Temas idTema;
-
-	@ManyToOne
 	private Usuarios idUsuario;
 
 	public Integer getIdRespondidas() {
@@ -59,14 +56,6 @@ public class Respondidas {
 
 	public void setIdStatus(Estatus idStatus) {
 		this.idStatus = idStatus;
-	}
-
-	public Temas getIdTema() {
-		return idTema;
-	}
-
-	public void setIdTema(Temas idTema) {
-		this.idTema = idTema;
 	}
 
 	public Usuarios getIdUsuario() {

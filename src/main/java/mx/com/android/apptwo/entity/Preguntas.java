@@ -20,7 +20,7 @@ public class Preguntas {
 
 	@ManyToOne(cascade = {CascadeType.MERGE})
 	private Temas idTema;
-
+	
 	public Integer getIdPregunta() {
 		return idPregunta;
 	}
